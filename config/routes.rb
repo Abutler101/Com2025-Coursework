@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     put :update
     delete :remove
   end
-  get 'order/create'
+  resources :order, only: %i[create show]
+
   get 'user/create'
   get 'user/destroy'
   get 'session/create'
