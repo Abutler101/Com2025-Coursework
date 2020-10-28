@@ -9,9 +9,6 @@ Rails.application.routes.draw do
     delete :remove
   end
   get 'order/create'
-  get 'review/create'
-  get 'review/destroy'
-  get 'section/show'
   get 'user/create'
   get 'user/destroy'
   get 'session/create'
