@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'product#index'
   resources :product, only: %i[index show] do
     resources :review, only: %i[create destroy]
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get '/shutdown' => 'user#destroy'
   get '/login' => 'session#create'
   get '/logout' => 'session#destroy'
+  get '/getintouch' => 'contact#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
