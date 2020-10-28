@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
   root 'product/index'
-  resources :product, only: %i[index show] do
-    resources :review, only: %i[create destroy]
+  resources :product, only: [:index, :show] do
+    resources :review, only: [:create, :destroy]
   end
-  resources :section, only: %i[show]
-  resource :cart, only: %i[show] do
+  resources :section, only: [:show]
+  resource :cart, only: [:show] do
     put :update
     delete :remove
   end
-  resources :order, only: %i[create show]
+  resources :order, only: [:create, :show]
 
   get '/signup', to: 'user#create'
   post '/signup', to: 'user#create'
