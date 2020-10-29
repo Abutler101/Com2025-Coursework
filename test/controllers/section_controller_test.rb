@@ -1,9 +1,8 @@
 require 'test_helper'
 
 class SectionControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
-    get section_show_url
-    assert_response :success
+  test "should show selected section" do
+
   end
 
 end
