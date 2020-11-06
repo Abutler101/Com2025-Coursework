@@ -123,7 +123,7 @@ Review.create!({
                })
 Review.create!({
                    productID: 6,
-                   userID: 1,
+                   userID: 2,
                    content: "Shipped surprisingly well in an envelope",
                    rating: 5
                })

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_141159) do
+ActiveRecord::Schema.define(version: 2020_11_06_164351) do
 
   create_table "order_entries", force: :cascade do |t|
     t.integer "orderID"
