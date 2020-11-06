@@ -18,7 +18,7 @@ Product.destroy_all
 sect1.products.create!({
                            name: "I heart Rails T-shirt",
                            description: "Unisex I hear rails shirt. So hideous, your preference of web frameworks won't
-                                         be the main reason people avoid you",
+                                         be the main reason people avoid you anymore",
                            stockCount: 20,
                            pricePence: 772,
                            image: openAsset("Clothes1.png")
@@ -82,3 +82,48 @@ sect3.products.create!({
                            pricePence: 9375,
                            image: openAsset("Trans3.png")
                        })
+
+User.destroy_all
+User.create!({
+                 firstName: "Test",
+                 lastName: "User1",
+                 email: "Test1@testacc.com",
+                 passwordCrypt: "",
+                 created_at: "2020-11-06 16:21:44.231242",
+                 updated_at: "2020-11-06 16:21:44.231242"
+             })
+User.create!({
+                 firstName: "Test",
+                 lastName: "User2",
+                 email: "Test2@testacc.com",
+                 passwordCrypt: "",
+                 created_at: "2020-11-06 16:21:44.231242",
+                 updated_at: "2020-11-06 16:21:44.231242"
+             })
+
+Review.destroy_all
+Review.create!({
+                   productID: 1,
+                   userID: 1,
+                   content: "Fits perfectly",
+                   rating: 5
+               })
+Review.create!({
+                   productID: 1,
+                   userID: 2,
+                   content: "Heart was miss-shapen",
+                   rating: 1
+               })
+
+Review.create!({
+                   productID: 6,
+                   userID: 1,
+                   content: "Too wet",
+                   rating: 0
+               })
+Review.create!({
+                   productID: 6,
+                   userID: 1,
+                   content: "Shipped surprisingly well in an envelope",
+                   rating: 5
+               })
