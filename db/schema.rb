@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_135816) do
+ActiveRecord::Schema.define(version: 2020_11_06_140234) do
+
+  create_table "order_entries", force: :cascade do |t|
+    t.integer "orderID"
+    t.integer "productID"
+    t.integer "quantity"
+    t.integer "unitprice"
+    t.integer "totalprice"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "orders", force: :cascade do |t|
     t.integer "totalCost"
