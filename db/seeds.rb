@@ -5,5 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+def openAsset(filename)
+  File.open(Rails.root.join('db', 'seedAssets', filename))
+end
+
+sect1 = Section.find_or_create_by! name: 'Clothes'
+sect2 = Section.find_or_create_by! name: 'Food'
+sect3 = Section.find_or_create_by! name: 'Transport'
+
 Product.destroy_all
-products = Product.create([name: "Test Item", description: "This item is a test", stockCount: 2020, pricePence: 200])
+
+sect1.products.create!({
+
+                       })
+sect1.products.create!({
+
+                       })
+sect1.products.create!({
+
+                       })
+
+sect2.products.create!({
+
+                       })
+sect2.products.create!({
+
+                       })
+sect2.products.create!({
+
+                       })
+
+sect3.products.create!({
+
+                       })
+sect3.products.create!({
+
+                       })
+sect3.products.create!({
+
+                       })
