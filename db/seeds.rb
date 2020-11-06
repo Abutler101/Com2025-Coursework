@@ -100,30 +100,30 @@ User.create!({
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
              })
-#
-# Review.destroy_all
-# Review.create!({
-#                    productID: 1,
-#                    userID: 1,
-#                    content: "Fits perfectly",
-#                    rating: 5
-#                })
-# Review.create!({
-#                    productID: 1,
-#                    userID: 2,
-#                    content: "Heart was miss-shapen",
-#                    rating: 1
-#                })
-#
-# Review.create!({
-#                    productID: 6,
-#                    userID: 1,
-#                    content: "Too wet",
-#                    rating: 0
-#                })
-# Review.create!({
-#                    productID: 6,
-#                    userID: 2,
-#                    content: "Shipped surprisingly well in an envelope",
-#                    rating: 5
-#                })
+
+Review.destroy_all
+Review.create!({
+                   product_id: 1,
+                   user_id: 1,
+                   content: "Fits perfectly",
+                   rating: 5
+               })
+Review.create!({
+                   product_id: 1,
+                   user_id: 2,
+                   content: "Heart was miss-shapen",
+                   rating: 1
+               })
+
+Review.create!({
+                   product_id: 6,
+                   user_id: 1,
+                   content: "Too wet",
+                   rating: 0
+               })
+Review.create!({
+                   product_id: 6,
+                   user_id: 2,
+                   content: "Shipped surprisingly well in an envelope",
+                   rating: 5
+               })

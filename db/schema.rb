@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_164351) do
+ActiveRecord::Schema.define(version: 2020_11_06_171022) do
 
   create_table "order_entries", force: :cascade do |t|
     t.integer "orderID"
@@ -42,12 +42,12 @@ ActiveRecord::Schema.define(version: 2020_11_06_164351) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "productID"
-    t.integer "userID"
     t.text "content"
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "product_id"
+    t.integer "user_id"
   end
 
   create_table "sections", force: :cascade do |t|
