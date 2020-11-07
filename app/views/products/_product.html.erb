@@ -10,7 +10,9 @@
   </p>
   <footer>
     <% if product.stockCount >0 %>
-      Link to add to cart
+      <%= link_to add_item_carts_path(product_id: product.id), method: :put do %>
+        <%= fa_icon "camera-retro", text: "Add To Cart" %>
+        <%end%>
     <%end%>
     <%= humanized_money_with_symbol product.price %>
   </footer>
