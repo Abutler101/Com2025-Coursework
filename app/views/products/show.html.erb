@@ -1,2 +1,24 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<section class="prdouctFocus">
+  <header class="PageSpecificHeader">
+
+  </header>
+  <article class="productDetails">
+    <h4>
+      Image: <%=image_tag @product.image.main.url %>
+      <br>
+      Name: <%= @product.name %>
+      <br>
+      Desc: <%= @product.description %>
+      <br>
+      Stock: <%= @product.stockCount %>
+      <br>
+      Price: <%= humanized_money_with_symbol @product.price %>
+      <br>
+      Reviews:
+    </h4>
+    <% @product.reviews.each do |i| %>
+      <%= i.content %> <br>
+    <% end %>
+    <br>
+  </article>
+</section>
