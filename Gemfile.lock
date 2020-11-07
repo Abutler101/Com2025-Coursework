@@ -263,7 +263,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   compass-h5bp (~> 1.0)
   compass-rails (~> 4.0)
-  font-awesome-rails (~> 4.7, >= 4.7.0.2)
+  font-awesome-rails
   html5-rails (~> 0.1.0)
   jbuilder (~> 2.5)
   jquery-rails
