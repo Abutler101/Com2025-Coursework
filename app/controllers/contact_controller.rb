@@ -4,7 +4,4 @@ class ContactController < ApplicationController
 
   def create
   end
-
-  def acknowledge
-  end
 end

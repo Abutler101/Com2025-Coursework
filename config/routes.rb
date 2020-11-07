@@ -1,22 +1,20 @@
 Rails.application.routes.draw do
-
-  root 'product#index'
-  resources :product, only: %i[index show] do
-    resources :review, only: %i[create destroy]
+  root 'products#index'
+  resources :products, only: %i[index show] do
+    resources :reviews, only: %i[create destroy]
   end
-  resources :section, only: [:show]
-  resource :cart, only: [:show] do
-    put :update
-    delete :remove
+  resources :sections, only: [:show]
+  resource :carts, only: [:show] do
+    put :add_item
+    delete :remove_item
   end
-  resources :order, only: %i[create show]
+  resources :orders, only: %i[create show]
 
-  get '/signup' => 'user#create'
-  post '/signup' => 'user#create'
-  get '/shutdown' => 'user#destroy'
-  get '/login' => 'session#create'
-  get '/logout' => 'session#destroy'
+  get '/signup' => 'users#create'
+  post '/signup' => 'users#create'
+  get '/shutdown' => 'users#destroy'
   get '/getintouch' => 'contact#new'
-
+  get '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
