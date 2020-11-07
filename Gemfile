@@ -60,6 +60,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Stuff I've added
 group :assets do
   gem 'compass-h5bp', '~> 1.0'
   gem 'compass-rails', '~> 4.0'
@@ -67,3 +69,4 @@ end
 
 gem 'html5-rails', '~> 0.1.0'
 gem 'jquery-rails'
+gem 'money-rails', '~>1.12'
