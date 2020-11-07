@@ -1,0 +1,17 @@
+<article class="product">
+  <header>
+    <%=link_to product do %>
+      <%#= image_tag(product.image) %>
+      <h3><%= product.name %></h3>
+    <%end%>
+  </header>
+  <p>
+    <%= product.description %>
+  </p>
+  <footer>
+    <% if product.stockCount >0 %>
+      Link to add to cart
+    <%end%>
+
+  </footer>
+</article>
