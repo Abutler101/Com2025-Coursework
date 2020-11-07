@@ -1,14 +1,12 @@
 require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
-  test "should get create" do
-    get users_create_url
-    assert_response :success
+  test "should get signup page" do
+
   end
 
-  test "should get destroy" do
-    get users_destroy_url
-    assert_response :success
+  test "should get close account page" do
+
   end
 
 end

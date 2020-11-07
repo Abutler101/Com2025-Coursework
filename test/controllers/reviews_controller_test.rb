@@ -1,14 +1,12 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
-  test "should get create" do
-    get reviews_create_url
-    assert_response :success
+  test "should create review on a product" do
+
   end
 
-  test "should get destroy" do
-    get reviews_destroy_url
-    assert_response :success
+  test "should view a review on a product" do
+
   end
 
 end
