@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ab02259Coursework</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<%= html_tag :class => "no-js" %>
+  <%= render "head" %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <body class="<%= controller.controller_name %>">
+    <%= render "chromeframe" %>
+    <%= render "header" %>
+    <%= render "flashes" %>
 
-  <body>
     <%= yield %>
+
+    <%= render "footer" %>
+
+    <%# Javascript at the bottom for fast page loading %>
+    <%= render "javascripts" %>
   </body>
 </html>
