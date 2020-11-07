@@ -66,7 +66,12 @@ group :assets do
   gem 'compass-h5bp', '~> 1.0'
   gem 'compass-rails', '~> 4.0'
 end
-
+group :development do
+  gem 'rake-compiler', '~> 1.1', '>= 1.1.1'
+  gem 'rspec', '~> 3.10'
+end
 gem 'html5-rails', '~> 0.1.0'
 gem 'jquery-rails'
 gem 'money-rails', '~>1.12'
+gem 'carrierwave', '~> 2.0'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
