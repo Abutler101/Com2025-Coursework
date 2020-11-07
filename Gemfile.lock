@@ -103,6 +103,8 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     html5-rails (0.1.0)
@@ -261,6 +263,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   compass-h5bp (~> 1.0)
   compass-rails (~> 4.0)
+  font-awesome-rails (~> 4.7, >= 4.7.0.2)
   html5-rails (~> 0.1.0)
   jbuilder (~> 2.5)
   jquery-rails
