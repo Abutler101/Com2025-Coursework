@@ -1,0 +1,11 @@
+<%= form_for :user, url: signup_url do |f| %>
+    <%= f.text_field :firstName, placeholder: "Enter First Name"  %>
+    <%= f.text_field :lastName, placeholder: "Enter Last Name"  %>
+  <br>
+  <%= f.text_field :email, placeholder: "Enter Email" %>
+  <br>
+    <%= f.password_field :password, placeholder: "Enter Password" %>
+    <%= f.password_field :password_confirmation, placeholder: "Re-enter Password" %>
+  <br>
+  <%= f.submit "Submit"%>
+<% end %>

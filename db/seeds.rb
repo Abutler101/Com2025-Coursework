@@ -88,7 +88,7 @@ User.create!({
                  firstName: "Test",
                  lastName: "User1",
                  email: "Test1@testacc.com",
-                 passwordCrypt: "",
+                 password_digest: "$2a$10$TftiUIoIGjrFw2Xaled0fuwxisIZ375XwJ.PbkF3.gVrVn7kdWBTa",
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
              })
@@ -96,7 +96,7 @@ User.create!({
                  firstName: "Test",
                  lastName: "User2",
                  email: "Test2@testacc.com",
-                 passwordCrypt: "",
+                 password_digest: "$2a$10$TftiUIoIGjrFw2Xaled0fuwxisIZ375XwJ.PbkF3.gVrVn7kdWBTa",
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
              })

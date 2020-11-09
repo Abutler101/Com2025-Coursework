@@ -10,11 +10,12 @@ Rails.application.routes.draw do
   end
   resources :orders, only: %i[create show]
 
-  get '/signup' => 'users#create'
+  get '/signup' => 'users#new'
   post '/signup' => 'users#create'
   get '/shutdown' => 'users#destroy'
   get '/getintouch' => 'contact#new'
-  get '/login' => 'sessions#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

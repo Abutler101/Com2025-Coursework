@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_06_171022) do
+ActiveRecord::Schema.define(version: 2020_11_09_151233) do
 
   create_table "order_entries", force: :cascade do |t|
     t.integer "orderID"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 2020_11_06_171022) do
     t.string "firstName"
     t.string "lastName"
     t.string "email"
-    t.string "passwordCrypt"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
