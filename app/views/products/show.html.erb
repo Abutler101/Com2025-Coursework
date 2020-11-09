@@ -16,8 +16,22 @@
       <br>
       Reviews:
     </h4>
+    <%= form_for(Review.new, url: product_reviews_url(@product,@review)) do |f|%>
+      <h5>Add a Review</h5>
+      <%= f.select :rating,
+                  options_for_select([['Amazing',5],
+                                       ['Good', 4],
+                                       ['Okay', 3],
+                                       ['Bad', 2],
+                                       ['Really Bad', 1],
+                                       ['Give me my money back',0]
+                                    ])%>
+      <%= f.text_area :content%>
+      <%= f.submit "Submit Review + Rating" %>
+    <%end %>
     <% @product.reviews.each do |i| %>
-      <%= i.content %> <br>
+      <%= i.rating%> - <%=i.content %> <br>
+      <%= link_to "REMOVE REVIEW", product_review_path(@product, i), :method => :delete%> <hr>
     <% end %>
     <br>
   </article>
