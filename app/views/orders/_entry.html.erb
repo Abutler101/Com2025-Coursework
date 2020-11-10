@@ -1,0 +1,17 @@
+<% @order.order_entries.each do |i| %>
+  <tr>
+    <td>
+      <%= image_tag i.product.image.small.url %>
+    </td>
+    <td>
+      <h5><%=i.product.name %></h5><br>
+      <p><%=i.product.description %></p>
+    </td>
+    <td>
+      <%=i.quantity %>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol i.totalprice %>
+    </td>
+  </tr>
+<% end %>

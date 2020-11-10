@@ -28,4 +28,8 @@
       </tr>
     </tfoot>
   </table>
+  <%=form_for :order, url: orders_url do |f|%>
+    <%= f.text_field :paymentEmail, value: curr_user.email%>
+    <%= f.submit "Submit"%>
+  <%end %>
 <%end%>
