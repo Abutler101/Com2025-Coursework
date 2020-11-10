@@ -10,10 +10,25 @@ class ApplicationController < ActionController::Base
 
   private
   def req_login
-    unless current_user
+    unless curr_user
       flash[:danger] = "Login to view this content"
       redirect_to login_url
     end
+  end
+
+  def cart
+    @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
+    # if cookies[:cart].present?
+    #   @cart = JSON.parse(cookies[:cart])
+    # else
+    #   @cart = {}
+    # end
+  end
+
+  helper_method :cart
+  def update_cart(new_cart)
+    cookies[:cart] ={value: JSON.generate(new_cart), expires_in: 7.days}
+    cookies[:cart]
   end
 
   def chck_session

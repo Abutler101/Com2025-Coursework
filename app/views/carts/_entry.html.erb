@@ -1,0 +1,24 @@
+<%num = info["Num"].to_i %>
+<%if product = Product.find_by(id: prodId) %>
+  <%itemTotal = product.price * num %>
+  <%@totalCost += itemTotal %>
+  <tr>
+    <td>
+      <%= image_tag product.image.small.url %>
+    </td>
+    <td>
+      <h5><%=product.name %></h5><br>
+      <p><%=product.description %></p>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol product.price %>
+    </td>
+    <td>
+      <%= link_to remove_item_carts_path(product_id: prodId), method: :delete do %> - <%end %>
+      <%= link_to add_item_carts_path(product_id: prodId), method: :put do %> + <%end %>
+    </td>
+    <td>
+      <%= humanized_money_with_symbol itemTotal%>
+    </td>
+  </tr>
+<%end %>

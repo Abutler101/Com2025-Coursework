@@ -1,0 +1,31 @@
+<h1 class="pageTitle">Shopping Cart</h1>
+<%if cart.blank? %>
+  <h1 class="alert">Empty cart</h1>
+<%else%>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Unit cost</th>
+        <th>Number</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%@totalCost = 0 %>
+      <%cart.each do |prodId, info| %>
+        <%= render 'entry', prodId: prodId, info: info%>
+      <%end %>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>
+          Total -
+        </th>
+        <th>
+          <%= humanized_money_with_symbol @totalCost%>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+<%end%>
