@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
   get '/shutdown' => 'users#destroy'
   get '/getintouch' => 'contact#new'
-  post '/getintouch' => 'contact#create'
+  post 'submit_contact' => 'contact#create'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
