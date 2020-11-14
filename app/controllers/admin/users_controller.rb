@@ -1,6 +1,4 @@
-class Admin::UsersController < ApplicationController
-  before_action :req_login
-  before_action :req_admin
+class Admin::UsersController < Admin::AuthorisedController
   def index
   end
 

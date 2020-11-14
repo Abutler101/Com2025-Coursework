@@ -1,6 +1,4 @@
-class Admin::SectionsController < ApplicationController
-  before_action :req_login
-  before_action :req_admin
+class Admin::SectionsController < Admin::AuthorisedController
   def index
   end
 
