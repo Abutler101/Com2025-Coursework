@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include pundit
   protect_from_forgery with: :exception
 
   def curr_user
@@ -7,6 +8,9 @@ class ApplicationController < ActionController::Base
     end
   end
   helper_method :curr_user
+  def pundit_user
+    curr_user
+  end
 
   private
   def req_login

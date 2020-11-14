@@ -84,6 +84,7 @@ sect3.products.create!({
                        })
 
 User.destroy_all
+# All users have password set to be blank
 User.create!({
                  firstName: "Test",
                  lastName: "User1",
@@ -99,6 +100,14 @@ User.create!({
                  password_digest: "$2a$10$TftiUIoIGjrFw2Xaled0fuwxisIZ375XwJ.PbkF3.gVrVn7kdWBTa",
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
+             })
+User.create!({
+                 firstName: "Admin",
+                 lastName: "User",
+                 email: "admin@testacc.com",
+                 password_digest: "$2a$10$TftiUIoIGjrFw2Xaled0fuwxisIZ375XwJ.PbkF3.gVrVn7kdWBTa",
+                 created_at: "2020-11-14 12:21:44.231242",
+                 updated_at: "2020-11-14 12:21:44.231242"
              })
 
 Review.destroy_all
