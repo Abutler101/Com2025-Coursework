@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   resources :orders, only: %i[create show]
 
   namespace :admin do
-    get '', to: 'dashboard#index', as: '/'
+    root to: 'dashboard#index'
+    resources :products, :sections, :orders, :users, except: %i[edit update show]
   end
 
 
