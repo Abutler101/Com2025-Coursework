@@ -105,6 +105,7 @@ User.create!({
                  firstName: "Admin",
                  lastName: "User",
                  email: "admin@testacc.com",
+                 admin: true,
                  password_digest: "$2a$10$TftiUIoIGjrFw2Xaled0fuwxisIZ375XwJ.PbkF3.gVrVn7kdWBTa",
                  created_at: "2020-11-14 12:21:44.231242",
                  updated_at: "2020-11-14 12:21:44.231242"
