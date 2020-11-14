@@ -15,7 +15,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
-
+    if curr_user.nil?
+      flash[:warning] = "Not logged in"
+    else
+      curr_user.destroy
+      session[:user_id] = nil
+      flash[:warning] = "Successfuly closed account"
+    end
+    redirect_to root_url
   end
 
   private
