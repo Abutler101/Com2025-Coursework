@@ -76,4 +76,3 @@ gem 'money-rails', '~>1.12'
 gem 'carrierwave', '~> 2.0'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "font-awesome-rails"
-gem "pundit"
