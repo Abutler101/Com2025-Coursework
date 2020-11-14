@@ -1,2 +1,17 @@
-<h1>Admin::Orders#index</h1>
-<p>Find me in app/views/admin/orders/index.html.erb</p>
+<h2>All orders</h2>
+<%=render 'admin/adminNavbar' %>
+<table>
+  <thead>
+  <tr>
+    <th>Order ID</th>
+    <th>Date</th>
+    <th>Items</th>
+    <th>Price</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @orders %>
+  </tbody>
+</table>
