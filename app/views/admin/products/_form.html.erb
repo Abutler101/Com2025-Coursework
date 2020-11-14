@@ -1,0 +1,30 @@
+<%= form_for [:admin, @product] do |f| %>
+  <% if f.object.errors.any? %>
+    <strong>Failed to add because:</strong>
+    <ul>
+      <%f.object.errors.full_messages.each do |err| %>
+        <li><%=err %></li>
+      <%end %>
+    </ul>
+  <%end %>
+
+  <%=f.label :name %>
+  <%=f.text_field :name %>
+
+  <%=f.label :description %>
+  <%=f.text_area :description %>
+
+  <%=f.label :section %>
+  <%=f.select :section_id, options_from_collection_for_select(Section.all.order(:name), :id, :name), { include_blank: true }%>
+
+  <%=f.label :stockCount %>
+  <%=f.number_field :stockCount %>
+
+  <%=f.label :pricePence %>
+  <%=f.number_field :pricePence %>
+
+  <%=f.label :image %>
+  <%=f.file_field :image %>
+
+  <%=f.submit "Create Product" %>
+<%end %>
