@@ -1,0 +1,8 @@
+<tr>
+  <td>
+    <h4><%= section.name %></h4>
+  </td>
+  <td>
+    <%= link_to fa_icon('trash'), [:admin, section], method: :delete, data: { confirm: "Confirm" } %>
+  </td>
+</tr>
