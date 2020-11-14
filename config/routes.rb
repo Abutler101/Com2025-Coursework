@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   end
   resources :orders, only: %i[create show]
 
+  namespace :admin do
+    get '', to: 'dashboard#index', as: '/'
+  end
+
+
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
   get '/shutdown' => 'users#destroy'
