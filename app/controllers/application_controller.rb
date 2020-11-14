@@ -16,6 +16,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def req_admin
+    unless curr_user.admin
+      flash[:danger] = "You must be admin to go there!"
+      redirect_to root_url
+    end
+  end
+
   def cart
     @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
     # if cookies[:cart].present?
