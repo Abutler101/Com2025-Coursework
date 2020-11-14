@@ -69,7 +69,6 @@ end
 group :development do
   gem 'rake-compiler', '~> 1.1', '>= 1.1.1'
   gem 'rspec', '~> 3.10'
-  gem 'rspec-rails'
 end
 gem 'html5-rails', '~> 0.1.0'
 gem 'jquery-rails'
