@@ -1,0 +1,14 @@
+<%= form_for [:admin, @section] do |f| %>
+  <% if f.object.errors.any? %>
+    <strong>Failed to add because:</strong>
+    <ul>
+      <%f.object.errors.full_messages.each do |err| %>
+        <li><%=err %></li>
+      <%end %>
+    </ul>
+  <%end %>
+
+  <%=f.label :name %>
+  <%=f.text_field :name %>
+  <%=f.submit "Create Section" %>
+<%end %>
