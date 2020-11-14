@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    get 'dashboard/index'
-  end
   root 'products#index'
   resources :products, only: %i[index show] do
     resources :reviews, only: %i[create destroy]
