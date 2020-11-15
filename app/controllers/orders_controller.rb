@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    order = Order.new(email: params[:paymentEmail],
+    order = Order.new(email: params[:order][:Email],
                       totalCost: cart_total,
                       user: curr_user)
     cart.each do |pId, info|
