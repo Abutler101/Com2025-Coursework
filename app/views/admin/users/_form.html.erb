@@ -1,0 +1,30 @@
+<%= form_for [:admin, @user] do |f| %>
+  <% if f.object.errors.any? %>
+    <strong>Failed to add because:</strong>
+    <ul>
+      <%f.object.errors.full_messages.each do |err| %>
+        <li><%=err %></li>
+      <%end %>
+    </ul>
+  <%end %>
+
+  <%=f.label :firstName %>
+  <%=f.text_field :firstName %>
+
+  <%=f.label :lastName %>
+  <%=f.text_field :lastName %>
+
+  <%=f.label :email %>
+  <%=f.email_field :email %>
+
+  <%=f.label :password %>
+  <%=f.password_field :password %>
+
+  <%=f.label :password_confirmation %>
+  <%=f.password_field :password_confirmation %>
+
+  <%=f.label :admin %>
+  <%=f.check_box :admin %>
+
+  <%= f.submit "Submit"%>
+<%end %>
