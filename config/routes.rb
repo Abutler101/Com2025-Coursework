@@ -26,5 +26,11 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
   get 'legal' => 'legal#index'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  #HTTP error routes
+  get '/403' => 'errors#forbidden'
+  get '/404' => 'errors#not_found'
+  get '/422' => 'errors#unacceptable'
+  get '/500' => 'errors#internal_error'
+
 end
