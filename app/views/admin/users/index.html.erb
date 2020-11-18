@@ -1,2 +1,18 @@
-<h1>Admin::Users#index</h1>
-<p>Show all users and have add remove functions</p>
+<h2>All users</h2>
+<%=render 'admin/adminNavbar' %>
+<%= link_to 'New User', [:new, :admin, :user]%>
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>email</th>
+    <th>Date opened</th>
+    <th>Admin</th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @users %>
+  </tbody>
+</table>

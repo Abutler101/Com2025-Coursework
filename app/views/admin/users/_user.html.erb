@@ -1,1 +1,14 @@
-<p>A user!</p>
+<tr>
+  <td><%= user.firstName%></td>
+  <td><%= user.lastName%></td>
+  <td><%= user.email%></td>
+  <td><%= user.created_at%></td>
+  <td>
+    <% if user.admin %>
+      <%= fa_icon('check-circle')%>
+    <%end %>
+  </td>
+  <td>
+    <%= link_to fa_icon('trash'), [:admin, user], method: :delete, data: { confirm: "Confirm?" } %>
+  </td>
+</tr>
