@@ -5,9 +5,9 @@ class ReviewsController < ApplicationController
     @review.user = curr_user
 
     if @review.save
-      flash[:success] = "Review Posted"
+      flash[:success] = t(:review_success)
     else
-      flash[:danger] = "Failed to post Try again"
+      flash[:danger] = t(:review_failed)
     end
     redirect_to product_url(@product.id)
   end
@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review = Review.find params[:id]
     @review.destroy
-    flash[:success] = "Review Deleted"
+    flash[:success] = t(:review_deleted)
     redirect_to product_url(@review.product_id)
   end
 

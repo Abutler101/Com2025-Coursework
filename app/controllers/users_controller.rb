@@ -6,21 +6,21 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      flash[:success] = "Account created"
+      flash[:success] = t(:acc_created)
       redirect_to root_url
     else
-      flash[:danger] = "Something went wrong"
+      flash[:danger] = t(:something_wrong)
       redirect_to root_url
     end
   end
 
   def destroy
     if curr_user.nil?
-      flash[:warning] = "Not logged in"
+      flash[:warning] = t(:not_logged_in)
     else
       curr_user.destroy
       session[:user_id] = nil
-      flash[:warning] = "Successfuly closed account"
+      flash[:warning] = t(:acc_closed)
     end
     redirect_to root_url
   end

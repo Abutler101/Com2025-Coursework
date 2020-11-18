@@ -26,9 +26,9 @@ class OrdersController < ApplicationController
     end
     if order.save!
       clear_cart
-      redirect_to order_path(order), notice: "Order has been placed"
+      redirect_to order_path(order), notice: t(:order_placed)
     else
-      redirect_to carts_path, error: "Failed to place order"
+      redirect_to carts_path, error: t(:order_failed)
     end
   end
 

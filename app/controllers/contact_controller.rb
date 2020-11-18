@@ -9,10 +9,10 @@ class ContactController < ApplicationController
     telephone = params[:telephone]
     message = params[:message]
     if email.blank?
-      flash[:alert] = "Supply an email address for response"
+      flash[:alert] = t(:email_request_flash)
     else
       ContactMailer.contact_email(email, name, telephone, message).deliver_now
-      flash[:notice] = "We'll be in touch"
+      flash[:notice] = t(:in_touch)
     end
     redirect_to root_path
   end
