@@ -7,7 +7,7 @@
   </td>
   <td>
     <% order.order_entries.each do |i| %>
-      <p>A product</p>
+      <p><%=i.product.name%> x <%=i.quantity %></p>
     <%end %>
   </td>
   <td>
