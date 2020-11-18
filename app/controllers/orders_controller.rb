@@ -10,12 +10,18 @@ class OrdersController < ApplicationController
                       user: curr_user)
     cart.each do |pId, info|
       if (prod = Product.find_by(id: pId))
-        order.order_entries.new(
-          product: prod,
-          quantity: info["Num"].to_i,
-          unitprice: prod.price,
-          totalprice: prod.price * info["Num"].to_i
-        )
+        if prod.stockCount > info["Num"].to_i
+          order.order_entries.new(
+              product: prod,
+              quantity: info["Num"].to_i,
+              unitprice: prod.price,
+              totalprice: prod.price * info["Num"].to_i
+          )
+          if order.valid?
+            prod.stockCount -= info["Num"].to_i
+            Product.update(prod.id, stockCount: prod.stockCount)
+          end
+        end
       end
     end
     if order.save!
