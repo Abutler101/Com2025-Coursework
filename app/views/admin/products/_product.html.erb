@@ -16,6 +16,6 @@
     <%=product.stockCount %>
   </td>
   <td>
-    <%= link_to fa_icon('trash'), [:admin, product], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Confirm?" } %>
+    <%= link_to fa_icon('trash'), [:admin, product], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: t('.confirm') } %>
   </td>
 </tr>

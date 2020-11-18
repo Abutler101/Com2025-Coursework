@@ -70,7 +70,7 @@ sect3.products.create!({
 sect3.products.create!({
                            name: "Car",
                            description: "Must be over 17 to buy. Must be under 2 to think this is what a car looks like",
-                           stockCount: 1,
+                           stockCount: 100,
                            pricePence: 6000064,
                            image: openAsset("Trans2.png")
                        })

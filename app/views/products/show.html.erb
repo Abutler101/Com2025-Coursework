@@ -4,37 +4,37 @@
   </header>
   <article class="productDetails">
     <h4>
-      Image: <%=image_tag @product.image.main.url %>
+      <%=t('.image_title') %> <%=image_tag @product.image.main.url %>
       <br>
-      Name: <%= @product.name %>
+      <%=t('.name_title') %> <%= @product.name %>
       <br>
-      Desc: <%= @product.description %>
+      <%=t('.desc_title') %>  <%= @product.description %>
       <br>
-      Stock: <%= @product.stockCount %>
+      <%=t('.stock_title') %>  <%= @product.stockCount %>
       <br>
-      Price: <%= humanized_money_with_symbol @product.price %>
+      <%=t('.price_title') %>  <%= humanized_money_with_symbol @product.price %>
       <br>
-      Reviews:
+      <%=t('.reviews_title') %>
     </h4>
     <%if curr_user %>
       <%= form_for(Review.new, url: product_reviews_url(@product,@review)) do |f|%>
-        <h5>Add a Review</h5>
+        <h5><%=t('.add_review') %> </h5>
         <%= f.select :rating,
-                     options_for_select([['Amazing',5],
-                                         ['Good', 4],
-                                         ['Okay', 3],
-                                         ['Bad', 2],
-                                         ['Really Bad', 1],
-                                         ['Give me my money back',0]
+                     options_for_select([[t('.lvl5'),5],
+                                         [t('.lvl4'), 4],
+                                         [t('.lvl3'), 3],
+                                         [t('.lvl2'), 2],
+                                         [t('.lvl1'), 1],
+                                         [t('.lvl0'),0]
                                         ])%>
         <%= f.text_area :content%>
-        <%= f.submit "Submit Review + Rating" %>
+        <%= f.submit t('.sub_button') %>
       <%end %>
     <%end %>
     <% @product.reviews.each do |i| %>
       <%= i.rating%> - <%=i.content %> <br>
       <% if i.user == curr_user %>
-        <%= link_to "REMOVE REVIEW", product_review_path(@product, i), :method => :delete%>
+        <%= link_to t('.remove_button'), product_review_path(@product, i), :method => :delete%>
       <%end %>
       <hr>
     <% end %>

@@ -1,6 +1,6 @@
 <%= form_for [:admin, @section] do |f| %>
   <% if f.object.errors.any? %>
-    <strong>Failed to add because:</strong>
+    <strong><%=t('.fail') %></strong>
     <ul>
       <%f.object.errors.full_messages.each do |err| %>
         <li><%=err %></li>
@@ -10,5 +10,5 @@
 
   <%=f.label :name %>
   <%=f.text_field :name %>
-  <%=f.submit "Create Section" %>
+  <%=f.submit t('.sub_button') %>
 <%end %>

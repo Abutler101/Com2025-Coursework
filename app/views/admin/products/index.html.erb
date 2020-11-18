@@ -1,14 +1,14 @@
-<h2>All products</h2>
+<h2><%=t('.page_title') %></h2>
 <%=render 'admin/adminNavbar' %>
-<%= link_to 'New Product', [:new, :admin, :product]%>
+<%= link_to t('.new_button'), [:new, :admin, :product]%>
 <table>
   <thead>
     <tr>
-      <th>Product</th>
+      <th><%=t('.prod_title') %></th>
       <th></th>
-      <th>Section</th>
-      <th>Price</th>
-      <th>Stock level</th>
+      <th><%=t('.sect_title') %></th>
+      <th><%=t('.price_title') %></th>
+      <th><%=t('.stock_title') %></th>
       <th></th>
     </tr>
   </thead>

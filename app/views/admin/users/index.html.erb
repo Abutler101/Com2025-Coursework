@@ -1,14 +1,14 @@
-<h2>All users</h2>
+<h2><%=t('.page_title') %></h2>
 <%=render 'admin/adminNavbar' %>
-<%= link_to 'New User', [:new, :admin, :user]%>
+<%= link_to t('.new_button'), [:new, :admin, :user]%>
 <table>
   <thead>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>email</th>
-    <th>Date opened</th>
-    <th>Admin</th>
+    <th><%=t('.fname_title') %></th>
+    <th><%=t('.lname_title') %></th>
+    <th><%=t('.email_title') %></th>
+    <th><%=t('.date_title') %></th>
+    <th><%=t('.admin_title') %></th>
     <th></th>
   </tr>
   </thead>

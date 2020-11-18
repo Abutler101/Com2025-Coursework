@@ -1,14 +1,14 @@
-<h1 class="pageTitle">Shopping Cart</h1>
+<h1 class="pageTitle"><%=t('.page_title') %></h1>
 <%if cart.blank? %>
-  <h1 class="alert">Empty cart</h1>
+  <h1 class="alert"><%=t('.empty') %></h1>
 <%else%>
   <table>
     <thead>
       <tr>
-        <th>Item</th>
-        <th>Unit cost</th>
-        <th>Number</th>
-        <th>Price</th>
+        <th><%=t('.item_title') %></th>
+        <th><%=t('.cost_title') %></th>
+        <th><%=t('.quan_title') %></th>
+        <th><%=t('.price_title') %></th>
       </tr>
     </thead>
     <tbody>
@@ -20,7 +20,7 @@
     <tfoot>
       <tr>
         <th>
-          Total -
+          <%=t('.total_title') %> -
         </th>
         <th>
           <%= humanized_money_with_symbol @totalCost%>
@@ -30,6 +30,6 @@
   </table>
   <%=form_for :order, url: orders_url do |f|%>
     <%= f.email_field :Email, value: curr_user.email%>
-    <%= f.submit "Submit"%>
+    <%= f.submit t('.sub_button')%>
   <%end %>
 <%end%>

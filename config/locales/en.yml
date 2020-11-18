@@ -25,3 +25,166 @@ en:
   logout: "Logged out successfully"
   acc_created: "Account created"
   acc_closed: "Account successfully closed"
+
+  users:
+    new:
+      page_title: "Signup page"
+    form:
+      fname_prompt: "Enter first name"
+      lname_prompt: "Enter last name"
+      email_prompt: "Enter email"
+      pword_prompt: "Enter password"
+
+  sessions:
+    new:
+      page_title: "Login"
+    form:
+      email_prompt: "Enter email"
+      pword_prompt: "Enter password"
+      sub_button: "Submit"
+
+  products:
+    index:
+      page_title: "Products"
+    show:
+      image_title: "Image: "
+      name_title: "Name: "
+      desc_title: "Description: "
+      stock_title: "Number in Stock: "
+      price_title: "Price: "
+      reviews_title: "User reviews: "
+      add_review: "Leave a review"
+      lvl5: "Amazing"
+      lvl4: "Good"
+      lvl3: "Okay"
+      lvl2: "Bad"
+      lvl1: "Really Bad"
+      lvl0: "Give me my money back"
+      sub_button: "Submit review and rating"
+      remove_button: "Remove Review"
+    product:
+      add_cart: "Add To Cart"
+
+  errors:
+    internal_error:
+      notice: "Sorry something went wrong on our end"
+    not_found:
+      notice: "Sorry this page could not be found"
+    unacceptable:
+      notice: "Sorry that input can not be accepted"
+    forbidden:
+      notice: "Sorry you don't have access to this"
+
+  orders:
+    show:
+      page_title: "Order Summary"
+      thanks: "Thanks for the order"
+      placed: "Order placed at"
+      prod_title: "Product"
+      quan_title: "Quantity"
+      price_title: "Price"
+      total_title: "Total spend"
+
+  contact:
+    new:
+      page_title: "Contact Us"
+    form:
+      name: "name"
+      enter_name: "enter name"
+      email: "email address"
+      enter_email: "enter email"
+      telephone: "phone number"
+      enter_telephone: "enter phone number"
+      message: "Message to send"
+      enter_message: "enter message"
+      sub_button: "Submit"
+
+  carts:
+    show:
+      page_title: "Your cart"
+      empty: "your cart is empty"
+      item_title: "Item"
+      cost_title: "Unit cost"
+      quan_title: "Number"
+      price_title: "Price"
+      total_title: "Total"
+      sub_button: "Place order"
+
+  application:
+    header:
+      app_title: "Alexis' Web Store"
+      home_title: "Home page"
+      cart_title: "Shopping cart"
+      login_title: "Login"
+      logout_title: "Logout"
+      signup_title: "Signup"
+      contact_title: "Get in touch"
+      dash_title: "Admin"
+
+  admin:
+    dashboard:
+      index:
+        page_title: "Admin Dashboard"
+
+    orders:
+      index:
+        page_title: "All orders"
+        id_title: "Order ID"
+        date_title: "Date placed"
+        items_title: "Items"
+        price_title: "Price"
+        email_title: "customer email"
+      order:
+        confirm: "Are you sure?"
+
+    products:
+      new:
+        page_title: "New Product"
+      form:
+        fail: "Failed to add because:"
+        sub_button: "Create Product"
+      index:
+        page_title: "All products"
+        new_button: "Create New Product"
+        prod_title: "Product"
+        sect_title: "Section"
+        price_title: "Price"
+        stock_title: "Stock level"
+      product:
+        confirm: "Are you sure?"
+
+    sections:
+        new:
+          page_title: "New Section"
+        index:
+          page_title: "All Product Sections"
+          new_button: "Create New Section"
+          sect_title: "Sections"
+        section:
+          confirm: "Are you sure?"
+        form:
+          fail: "Failed to add because:"
+          sub_button: "Create Section"
+
+    users:
+      new:
+        page_title: "New User"
+      index:
+        page_title: "All Users"
+        new_button: "Create New User"
+        fname_title: "First name"
+        lname_title: "Last name"
+        email_title: "Email"
+        date_title: "Date opened"
+        admin_title: "Admin"
+      user:
+        confirm: "Are you sure?"
+      form:
+        fail: "Failed to add because:"
+        sub_button: "Create User"
+
+    adminNavbar:
+      prod_man: "Product Manager"
+      sect_man: "Section Manager"
+      user_man: "User Manager"
+      order_man: "Order Manager"
