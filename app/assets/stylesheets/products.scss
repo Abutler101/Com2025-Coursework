@@ -1,11 +1,12 @@
 .productTable{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   .product{
-    max-width: 250px;
+    width: 275px;
     position: relative;
-    border: 1px solid #c1c1c1;
+    border: 2px solid #c1c1c1;
     border-radius: 8px;
     padding: 10px;
     padding-bottom: 40px;
