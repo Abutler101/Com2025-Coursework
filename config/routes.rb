@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :products, only: %i[index show] do
     resources :reviews, only: %i[create destroy]
   end
-  resources :sections, only: [:show]
+  resources :sections, only: %i[index show]
   resource :carts, only: [:show] do
     put :add_item
     delete :remove_item

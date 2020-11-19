@@ -1,12 +1,19 @@
 <header id="header">
   <h1><%=t('.app_title') %></h1><br>
-  <h3><%=link_to t('.home_title'), root_path%> |
-      <%=link_to t('.cart_title'), carts_path%> |
-      <%=link_to t('.login_title'), login_path%> |
-      <%=link_to t('.logout_title'), logout_path%> |
-      <%=link_to t('.signup_title'), signup_path%> |
-      <%=link_to t('.contact_title'), getintouch_path%> |
-      <%=link_to t('.dash_title'), admin_root_path %>
+  <h3>
+      <%=link_to t('.home_title'), root_path%> |
+      <%if curr_user.nil? %>
+        <%=link_to t('.login_title'), login_path%> |
+        <%=link_to t('.signup_title'), signup_path%> |
+        <%=link_to t('.contact_title'), getintouch_path%> |
+      <%else %>
+        <%=link_to t('.cart_title'), carts_path%> |
+        <%=link_to t('.sect_title'), sections_path %> |
+        <%=link_to t('.logout_title'), logout_path%> |
+        <%if curr_user.admin %>
+          <%=link_to t('.dash_title'), admin_root_path %>
+        <%end %>
+      <%end %>
   </h3>
   <hr>
   <!--  Add catagories drop down with jquery-->
