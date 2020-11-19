@@ -28,3 +28,12 @@
 @import 'layout';
 @import 'media_queries';
 @import "font-awesome";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+  padding-top: 70px;
+}
+.pageTitle{
+
+}
