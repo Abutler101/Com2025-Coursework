@@ -161,7 +161,7 @@ en:
           new_button: "Create New Section"
           sect_title: "Sections"
         section:
-          confirm: "Are you sure?"
+          confirm: "Doing this will delete both the section and all products contained. Are you sure?"
         form:
           fail: "Failed to add because:"
           sub_button: "Create Section"
@@ -178,7 +178,7 @@ en:
         date_title: "Date opened"
         admin_title: "Admin"
       user:
-        confirm: "Are you sure?"
+        confirm: "Doing this will delete the user and all their orders and reviews. Are you sure?"
       form:
         fail: "Failed to add because:"
         sub_button: "Create User"
