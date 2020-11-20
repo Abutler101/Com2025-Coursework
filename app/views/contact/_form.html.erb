@@ -1,12 +1,15 @@
-<%= form_tag submit_contact_path, method: 'post', :html => {:id => 'ContactForm'} do %>
+<%= form_tag submit_contact_path,:id => 'ContactForm', method: 'post' do %>
+  <h3>This is text that should get picked up</h3>
   <%=  label_tag :name, t('.name')%>
-    <%= text_field_tag :name, '', title: t('.enter_name'), size: 50%>
+    <%= text_field_tag :name, '',title: t('.enter_name')%>
+  <br>
   <%= label_tag :email, t('.email')%>
-    <%= email_field_tag :email, '', title: t('.enter_email')%>
+    <%= email_field_tag :email, '',title: t('.enter_email')%>
+  <br>
   <%= label_tag :telephone, t('.telephone')%>
-    <%= telephone_field_tag :telephone, '', title: t('.enter_telephone')%>
+    <%= telephone_field_tag :telephone,'' ,title: t('.enter_telephone')%>
   <br>
   <%= label_tag :message, t('.message')%>
-    <%= text_field_tag :message, '', title: t('.enter_message'), size: 100%>
+    <%= text_field_tag :message, '', title: t('.enter_message')%>
   <%= submit_tag t('.sub_button')%>
 <%end %>

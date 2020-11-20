@@ -47,9 +47,23 @@ function  ValidateUserForm() {
     });
 }
 
+function  ValidateContactForm() {
+    $('#ContactForm').validate({
+        rules: {
+            'name': {required: true},
+            'email': {required: true, email: true},
+            'telephone': {required: true, number: true},
+        },
+        messages: {
+            'name': {required: "You must enter Your Name",},
+            'email': {required: "You must enter Your email", email: "You must enter a valid email"},
+            'telephone': {required: "Your phone Number is a required field"}
+        }
+    });
+}
+
 $(document).ready(function() {
-    if(document.getElementById('SignupForm')) {
-        ValidateUserForm();
-    }
+    if(document.getElementById('SignupForm')) {ValidateUserForm();}
+    if(document.getElementById('ContactForm')) {ValidateContactForm();}
 });
 
