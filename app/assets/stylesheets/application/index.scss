@@ -38,6 +38,7 @@ form label, form input{
   display: inline-block;
   margin: 10px;
 }
+//Class Is if it's alert or notice etc. See html5-rails gem for partials and views
 #flash{
   color: red;
   font-size: 20px;

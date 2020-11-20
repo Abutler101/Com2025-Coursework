@@ -77,3 +77,4 @@ gem 'carrierwave', '~> 2.0'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-validation-rails'
