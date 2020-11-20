@@ -13,14 +13,18 @@
       </ul>
     </div>
   <% end %>
-
-  <%= f.text_field :firstName, placeholder: t('.fname_prompt'), :html => {:id => 'Fname'}  %>
-  <%= f.text_field :lastName, placeholder: t('.lname_prompt'), :html => {:id => 'Lname'}  %>
+  <%= f.label :firstName, t('.fname_prompt') %>
+  <%= f.text_field :firstName,:html => {:id => 'Fname'}  %>
+  <%= f.label :lasstName, t('.lname_prompt') %>
+  <%= f.text_field :lastName, :html => {:id => 'Lname'}  %>
   <br>
-  <%= f.text_field :email, placeholder: t('.email_prompt'), :html => {:id => 'Email'} %>
+  <%= f.label :firstName, t('.email_prompt') %>
+  <%= f.text_field :email, :html => {:id => 'Email'} %>
   <br>
-  <%= f.password_field :password, placeholder: t('.pword_prompt'), :html => {:id => 'Password'} %>
-  <%= f.password_field :password_confirmation, placeholder: t('.pword_prompt'), :html => {:id => 'PasswordConf'} %>
+  <%= f.label :password, t('.pword_prompt') %>
+  <%= f.password_field :password, :html => {:id => 'Password'} %>
+  <%= f.label :password, t('.pword_prompt') %>
+  <%= f.password_field :password_confirmation, :html => {:id => 'PasswordConf'} %>
   <br>
   <%= f.submit "Submit"%>
 <% end %>

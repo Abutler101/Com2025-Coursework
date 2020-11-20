@@ -30,10 +30,10 @@ en:
     new:
       page_title: "Signup page"
     form:
-      fname_prompt: "Enter first name"
-      lname_prompt: "Enter last name"
-      email_prompt: "Enter email"
-      pword_prompt: "Enter password"
+      fname_prompt: "First Name"
+      lname_prompt: "Last Name"
+      email_prompt: "Email Address"
+      pword_prompt: "Password"
 
   sessions:
     new:
