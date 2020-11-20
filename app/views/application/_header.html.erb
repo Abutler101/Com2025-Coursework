@@ -1,21 +1,36 @@
 <header id="header">
-  <h1><%=t('.app_title') %></h1><br>
-  <h3>
-      <%=link_to t('.home_title'), root_path%> |
-      <%if curr_user.nil? %>
-        <%=link_to t('.login_title'), login_path%> |
-        <%=link_to t('.signup_title'), signup_path%> |
-        <%=link_to t('.contact_title'), getintouch_path%> |
-      <%else %>
-        <%=link_to t('.cart_title'), carts_path%> |
-        <%=link_to t('.sect_title'), sections_path %> |
-        <%=link_to t('.logout_title'), logout_path%> |
-        <%if curr_user.admin %>
-          <%=link_to t('.dash_title'), admin_root_path %>
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"><%=t('.app_title') %></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><%=link_to t('.home_title'), root_path%> </li>
+        <%if curr_user.nil? %>
+          <li><%=link_to t('.login_title'), login_path%></li>
+          <li><%=link_to t('.signup_title'), signup_path%></li>
+          <li><%=link_to t('.contact_title'), getintouch_path%></li>
+        <%else %>
+          <li><%=link_to t('.cart_title'), carts_path%></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <%=t('.sect_title')%>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <% Section.all.each do |sect| %>
+                <li><%= link_to sect.name, section_path(sect) %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li><%=link_to t('.logout_title'), logout_path%></li>
+          <%if curr_user.admin %>
+            <li><%=link_to t('.dash_title'), admin_root_path %></li>
+          <%end %>
         <%end %>
-      <%end %>
-  </h3>
-  <hr>
+      </ul>
+    </div>
+  </nav>
   <!--  Add catagories drop down with jquery-->
   <!--  Have options change based on if you are logged in in or not etc-->
 </header>
