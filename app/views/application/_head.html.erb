@@ -4,11 +4,12 @@
 
   <title><%= "#{ controller.controller_name.titleize } - #{ controller.action_name.titleize }" %></title>
 
-  <meta name="description" content="">
+  <meta name="description" content="Random Web store of assorted things">
   <meta name="viewport" content="width=device-width">
 
   <%= render "stylesheets" %>
   <%= javascript_include_tag "polyfills" %>
+  <%= javascript_include_tag "application" %>
 
   <%= csrf_meta_tag %>
 </head>

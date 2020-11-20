@@ -1,11 +1,14 @@
-<%= form_for :user, url: signup_url do |f| %>
-    <%= f.text_field :firstName, placeholder: t('.fname_prompt')  %>
-    <%= f.text_field :lastName, placeholder: t('.lname_prompt')  %>
+<%= form_for :user, url: signup_url, :html => {:id => 'SignupForm'} do |f| %>
+    <%= f.text_field :firstName, placeholder: t('.fname_prompt'), :html => {:id => 'Fname'}  %>
+    <span class="error">This field is required</span>
+    <%= f.text_field :lastName, placeholder: t('.lname_prompt'), :html => {:id => 'Lname'}  %>
+    <span class="error">This field is required</span>
   <br>
-  <%= f.text_field :email, placeholder: t('.email_prompt') %>
+  <%= f.text_field :email, placeholder: t('.email_prompt'), :html => {:id => 'Email'} %>
+  <span class="error">This field is required</span>
   <br>
-    <%= f.password_field :password, placeholder: t('.pword_prompt') %>
-    <%= f.password_field :password_confirmation, placeholder: t('.pword_prompt') %>
+    <%= f.password_field :password, placeholder: t('.pword_prompt'), :html => {:id => 'Password'} %>
+    <%= f.password_field :password_confirmation, placeholder: t('.pword_prompt'), :html => {:id => 'PasswordConf'} %>
   <br>
   <%= f.submit "Submit"%>
 <% end %>

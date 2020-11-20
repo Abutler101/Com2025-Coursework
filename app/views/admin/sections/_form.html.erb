@@ -1,4 +1,4 @@
-<%= form_for [:admin, @section] do |f| %>
+<%= form_for [:admin, @section], :html => {:id => 'NewSectForm'} do |f| %>
   <% if f.object.errors.any? %>
     <strong><%=t('.fail') %></strong>
     <ul>

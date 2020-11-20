@@ -8,3 +8,4 @@
 //= require jquery_ujs
 //= require h5bp
 //= require bootstrap-sprockets
+//= require_tree .

@@ -32,8 +32,43 @@
 @import "bootstrap";
 @import "products";
 body{
-  padding-top: 70px;
+  padding-top: 10px;
 }
-.pageTitle{
+form label, form input{
+  display: inline-block;
+  margin: 10px;
+}
+#flash{
+  color: red;
+  font-size: 20px;
+}
 
+table, th, td {
+  border: 1px solid black;
+  width: auto;
+  text-align: center;
+}
+table{
+  width: 90%;
+}
+th{
+  font-size: 20px;
+}
+td{
+  font-size: 15px;
+}
+
+.error{
+  display: none;
+  margin-left: 10px;
+}
+.error_show{
+  color: red;
+  margin-left: 10px;
+}
+input.invalid, textarea.invalid{
+  border: 2px solid red;
+}
+input.valid, textarea.valid{
+  border: 2px solid green;
 }

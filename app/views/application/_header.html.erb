@@ -9,7 +9,6 @@
         <%if curr_user.nil? %>
           <li><%=link_to t('.login_title'), login_path%></li>
           <li><%=link_to t('.signup_title'), signup_path%></li>
-          <li><%=link_to t('.contact_title'), getintouch_path%></li>
         <%else %>
           <li><%=link_to t('.cart_title'), carts_path%></li>
           <li class="dropdown">
@@ -28,6 +27,7 @@
             <li><%=link_to t('.dash_title'), admin_root_path %></li>
           <%end %>
         <%end %>
+        <li><%=link_to t('.contact_title'), getintouch_path%></li>
       </ul>
     </div>
   </nav>

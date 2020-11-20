@@ -6,6 +6,7 @@
     <thead>
       <tr>
         <th><%=t('.item_title') %></th>
+        <th></th>
         <th><%=t('.cost_title') %></th>
         <th><%=t('.quan_title') %></th>
         <th><%=t('.price_title') %></th>
@@ -20,7 +21,7 @@
     <tfoot>
       <tr>
         <th>
-          <%=t('.total_title') %> -
+          <%=t('.total_title') %>
         </th>
         <th>
           <%= humanized_money_with_symbol @totalCost%>
