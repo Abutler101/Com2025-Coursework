@@ -10,32 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_14_121726) do
+ActiveRecord::Schema.define(version: 2020_11_21_195917) do
 
   create_table "order_entries", force: :cascade do |t|
-    t.integer "quantity"
-    t.integer "unitprice"
+    t.integer "quantity", default: 0, null: false
+    t.integer "unitprice", default: 0, null: false
     t.integer "totalprice"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "product_id"
-    t.integer "order_id"
+    t.integer "product_id", null: false
+    t.integer "order_id", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "totalCost"
+    t.integer "totalCost", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
-    t.integer "user_id"
+    t.integer "user_id", null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "stockCount"
-    t.integer "pricePence"
-    t.string "image"
+    t.string "name", default: "Missing a Name", null: false
+    t.text "description", default: "No Description Needed", null: false
+    t.integer "stockCount", default: 0, null: false
+    t.integer "pricePence", default: 0, null: false
+    t.string "image", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "section_id"
@@ -43,28 +43,28 @@ ActiveRecord::Schema.define(version: 2020_11_14_121726) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.text "content"
-    t.integer "rating"
+    t.text "content", null: false
+    t.integer "rating", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "product_id"
-    t.integer "user_id"
+    t.integer "product_id", null: false
+    t.integer "user_id", null: false
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "name"
+    t.string "name", default: "Missing a Name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "firstName"
-    t.string "lastName"
-    t.string "email"
-    t.string "password_digest"
+    t.string "firstName", null: false
+    t.string "lastName", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "admin", default: false
+    t.boolean "admin", default: false, null: false
   end
 
 end
