@@ -19,6 +19,8 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+//Use jquery validate to validate the 2 public facing forms that are used to create objects and take any real time to
+//populate.
 function  ValidateUserForm() {
     $('#SignupForm').validate({
         rules: {
@@ -51,7 +53,9 @@ function  ValidateContactForm() {
     });
 }
 
+//Only run jquery when the DOM is fully setup
 $(document).ready(function() {
+    //Run validations if the target forms are in the loaded DOM
     if(document.getElementById('SignupForm')) {ValidateUserForm();}
     if(document.getElementById('ContactForm')) {ValidateContactForm();}
 });
