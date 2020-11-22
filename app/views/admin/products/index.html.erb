@@ -1,6 +1,7 @@
+<!--Build and display a table of product info -->
 <h2><%=t('.page_title') %></h2>
 <%=render 'admin/adminNavbar' %>
-<%= link_to t('.new_button'), [:new, :admin, :product]%>
+<strong><%= link_to t('.new_button'), [:new, :admin, :product]%></strong>
 <table>
   <thead>
     <tr>

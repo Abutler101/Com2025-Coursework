@@ -1,3 +1,7 @@
+<!--
+Gather all info required to create a new section. Has html id if validation needed later but as it is an internal
+admin page it is assumed the user is proficient enough to make sure the form is correct before submitting
+ -->
 <%= form_for [:admin, @section], :html => {:id => 'NewSectForm'} do |f| %>
   <% if f.object.errors.any? %>
     <strong><%=t('.fail') %></strong>

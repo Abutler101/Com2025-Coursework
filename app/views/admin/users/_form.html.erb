@@ -1,3 +1,7 @@
+<!--
+Gather all info required to create a new User. Has html id if validation needed later but as it is an internal
+admin page it is assumed the user is proficient enough to make sure the form is correct before submitting
+ -->
 <%= form_for [:admin, @user], :html => {:id => 'NewUsrForm'} do |f| %>
   <% if f.object.errors.any? %>
     <strong><%=t('.fail') %></strong>
@@ -10,21 +14,18 @@
 
   <%=f.label :firstName %>
   <%=f.text_field :firstName %>
-
   <%=f.label :lastName %>
   <%=f.text_field :lastName %>
-
+  <br>
   <%=f.label :email %>
   <%=f.email_field :email %>
-
+  <br>
   <%=f.label :password %>
   <%=f.password_field :password %>
-
   <%=f.label :password_confirmation %>
   <%=f.password_field :password_confirmation %>
-
   <%=f.label :admin %>
   <%=f.check_box :admin %>
-
+  <br>
   <%= f.submit t('.sub_button')%>
 <%end %>

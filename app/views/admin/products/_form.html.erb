@@ -1,3 +1,7 @@
+<!--
+Gather all info required to create a new product. Has html id if validation needed later but as it is an internal
+admin page it is assumed the user is proficient enough to make sure the form is correct before submitting
+ -->
 <%= form_for [:admin, @product], :html => {:id => 'NewProdForm'} do |f| %>
   <% if f.object.errors.any? %>
     <strong><%=t('.fail') %></strong>
@@ -9,22 +13,22 @@
   <%end %>
 
   <%=f.label :name %>
-  <%=f.text_field :name %>
+  <%=f.text_field :name %><br>
 
   <%=f.label :description %>
-  <%=f.text_area :description %>
+  <%=f.text_area :description %><br>
 
   <%=f.label :section %>
-  <%=f.select :section_id, options_from_collection_for_select(Section.all.order(:name), :id, :name), { include_blank: true }%>
+  <%=f.select :section_id, options_from_collection_for_select(Section.all.order(:name), :id, :name), { include_blank: true }%><br>
 
   <%=f.label :stockCount %>
-  <%=f.number_field :stockCount %>
+  <%=f.number_field :stockCount %><br>
 
   <%=f.label :pricePence %>
-  <%=f.number_field :pricePence %>
+  <%=f.number_field :pricePence %><br>
 
   <%=f.label :image %>
-  <%=f.file_field :image %>
+  <%=f.file_field :image %><br>
 
   <%=f.submit t('.sub_button') %>
 <%end %>
