@@ -1,3 +1,4 @@
+# Carrier wave generated image uploader - 3 versions of an image are stored for use in different places in the site
 class ProductImgUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
