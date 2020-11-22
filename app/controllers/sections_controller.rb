@@ -1,9 +1,5 @@
-# Product section controller - Shows prdouct by section and all available sections
+# Product section controller - Shows prdoucts in a given section
 class SectionsController < ApplicationController
-  # If the dropdown doesn't play ball an old fashioned table as back up is provided
-  def index
-    @sections = Section.all
-  end
 
   #Show a specific section and it's products
   def show

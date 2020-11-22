@@ -1,3 +1,4 @@
+<!--Signup form, validated with JS -->
 <%= form_for @user, url: signup_url, :html => {:id => 'SignupForm'} do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -18,7 +19,7 @@
   <%= f.label :lasstName, t('.lname_prompt') %>
   <%= f.text_field :lastName, :html => {:id => 'Lname'}  %>
   <br>
-  <%= f.label :firstName, t('.email_prompt') %>
+  <%= f.label :email, t('.email_prompt') %>
   <%= f.text_field :email, :html => {:id => 'Email'} %>
   <br>
   <%= f.label :password, t('.pword_prompt') %>
