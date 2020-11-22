@@ -46,7 +46,6 @@ function  ValidateUserForm() {
         }
     });
 }
-
 function  ValidateContactForm() {
     $('#ContactForm').validate({
         rules: {
