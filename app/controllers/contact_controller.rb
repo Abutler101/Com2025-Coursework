@@ -1,4 +1,6 @@
+# Contact form controller
 class ContactController < ApplicationController
+  # Location of form
   def new
   end
 

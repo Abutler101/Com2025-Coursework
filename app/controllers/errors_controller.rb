@@ -1,3 +1,4 @@
+# Error controller, used to overide default rails status code error pages
 class ErrorsController < ApplicationController
   def not_found
     respond_to do |format|
