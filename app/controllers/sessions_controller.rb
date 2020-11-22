@@ -32,6 +32,6 @@ class SessionsController < ApplicationController
   private
   # When logging in you should only provide an email and password
   def session_params
-    params.require(:session).permit(:email, :password)
+    params.permit(:email, :password)
   end
 end
