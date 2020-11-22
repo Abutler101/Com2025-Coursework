@@ -1,10 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+# Helper for loading images for products
 def openAsset(filename)
   File.open(Rails.root.join('db', 'seedAssets', filename))
 end
@@ -13,8 +10,10 @@ sect1 = Section.find_or_create_by! name: 'Clothes'
 sect2 = Section.find_or_create_by! name: 'Food'
 sect3 = Section.find_or_create_by! name: 'Transport'
 
+# Clear all products
 Product.destroy_all
 
+# Insert 3 products into each of the sections
 sect1.products.create!({
                            name: "I heart Rails T-shirt",
                            description: "Unisex I hear rails shirt. So hideous, your preference of web frameworks won't
@@ -83,6 +82,7 @@ sect3.products.create!({
                            image: openAsset("Trans3.png")
                        })
 
+# Clear the user table and insert 3 users. One of which is an admin account
 User.destroy_all
 # All users have password set to be blank
 User.create!({
@@ -111,6 +111,7 @@ User.create!({
                  updated_at: "2020-11-14 12:21:44.231242"
              })
 
+# Clear the Review table and insert 4 reviews across various products
 Review.destroy_all
 Review.create!({
                    product_id: 1,
