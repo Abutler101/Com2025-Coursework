@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  stockCount: 1
-  pricePence: 1
-  image: MyString
+  name: "productFixture1"
+  description: "Descriptive Stuff"
+  stockCount: 10
+  pricePence: 100
+  image: "An image would be here" #TODO: Fix this and have images loading properly
+  section_id: sections(:one).id
 
 two:
-  name: MyString
-  description: MyText
-  stockCount: 1
-  pricePence: 1
-  image: MyString
+  name: "productFixture2"
+  description: "Descriptive Stuff"
+  stockCount: 10
+  pricePence: 100
+  image: "An image would be here"
+  section_id: sections(:one).id

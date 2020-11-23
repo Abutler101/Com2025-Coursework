@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  productID: 1
-  userID: 1
-  content: MyText
+  product_id: products(:one).id
+  user_id: users(:one).id
+  content: "Content"
   rating: 1
 
 two:
-  productID: 1
-  userID: 1
-  content: MyText
-  rating: 1
+  product_id: products(:one).id
+  user_id: users(:one).id
+  content: "Content"
+  rating: 4

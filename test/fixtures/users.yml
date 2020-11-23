@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  firstName: MyString
-  lastName: MyString
-  email: MyString
-  passwordCrypt: MyString
+  firstName: "User1"
+  lastName: "testerson"
+  email: "user1@testfix.com"
+  password_digest: "$2a$10$z4tBMW3RFGkQm/mGEKgAP..POVOETJn/Ybne1nIaunXi.DL.uT/Ra" #t00l33t4u
+  admin: true
 
 two:
-  firstName: MyString
-  lastName: MyString
-  email: MyString
-  passwordCrypt: MyString
+  firstName: "User2"
+  lastName: "testerson"
+  email: "user2@testfix.com"
+  password_digest: "$2a$10$z4tBMW3RFGkQm/mGEKgAP..POVOETJn/Ybne1nIaunXi.DL.uT/Ra"
+  admin: false
