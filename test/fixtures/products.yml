@@ -6,7 +6,7 @@ one:
   stockCount: 10
   pricePence: 100
   image: "An image would be here" #TODO: Fix this and have images loading properly
-  section_id: sections(:one).id
+  section: one
 
 two:
   name: "productFixture2"
@@ -14,4 +14,4 @@ two:
   stockCount: 10
   pricePence: 100
   image: "An image would be here"
-  section_id: sections(:one).id
+  section: one

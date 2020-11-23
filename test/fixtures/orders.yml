@@ -3,9 +3,9 @@
 one:
   totalCost: 1
   email: users(:one).email
-  user: users(:one)
+  user: one
 
 two:
   totalCost: 1
   email: users(:one).email
-  user: users(:one)
+  user: one

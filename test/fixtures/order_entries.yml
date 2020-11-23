@@ -1,22 +1,22 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  order_id: orders(:one).id
-  product_id: products(:one).id
+  order: one
+  product: one
   quantity: 1
   unitprice: 1
   totalprice: 1
 
 two:
-  order_id: orders(:one).id
-  product_id: products(:two).id
+  order: one
+  product: two
   quantity: 11
   unitprice: 1
   totalprice: 1
 
 three:
-  order_id: orders(:two).id
-  product_id: products(:two).id
+  order: two
+  product: two
   quantity: 10
   unitprice: 1
   totalprice: 1
