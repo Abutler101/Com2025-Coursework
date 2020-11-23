@@ -85,7 +85,7 @@ sect3.products.create!({
 # Clear the user table and insert 3 users. One of which is an admin account
 User.destroy_all
 # All users have password set to be blank
-User.create!({
+testUser1 = User.create!({
                  firstName: "Test",
                  lastName: "User1",
                  email: "Test1@testacc.com",
@@ -93,7 +93,7 @@ User.create!({
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
              })
-User.create!({
+testUser2 = User.create!({
                  firstName: "Test",
                  lastName: "User2",
                  email: "Test2@testacc.com",
@@ -101,7 +101,7 @@ User.create!({
                  created_at: "2020-11-06 16:21:44.231242",
                  updated_at: "2020-11-06 16:21:44.231242"
              })
-User.create!({
+testAdmin = User.create!({
                  firstName: "Admin",
                  lastName: "User",
                  email: "admin@testacc.com",
@@ -110,31 +110,33 @@ User.create!({
                  created_at: "2020-11-14 12:21:44.231242",
                  updated_at: "2020-11-14 12:21:44.231242"
              })
-
+testUser1.save
+testUser2.save
+testAdmin.save
 # Clear the Review table and insert 4 reviews across various products
 Review.destroy_all
 Review.create!({
-                   product_id: 1,
-                   user_id: 1,
+                   product_id: sect1.products.first.id,
+                   user_id: testUser1.id,
                    content: "Fits perfectly",
                    rating: 5
                })
 Review.create!({
-                   product_id: 1,
-                   user_id: 2,
+                   product_id: sect1.products.first.id,
+                   user_id: testUser2.id,
                    content: "Heart was miss-shapen",
                    rating: 1
                })
 
 Review.create!({
-                   product_id: 6,
-                   user_id: 1,
+                   product_id: sect2.products.last.id,
+                   user_id: testUser1.id,
                    content: "Too wet",
                    rating: 0
                })
 Review.create!({
-                   product_id: 6,
-                   user_id: 2,
+                   product_id: sect2.products.last.id,
+                   user_id: testUser2.id,
                    content: "Shipped surprisingly well in an envelope",
                    rating: 5
                })
