@@ -1,11 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+<%def openAsset(filename)
+    File.open(Rails.root.join('test', 'fixtures', 'files', filename))
+  end
+%>
 one:
   name: "productFixture1"
   description: "Descriptive Stuff"
   stockCount: 10
   pricePence: 100
-  image: "An image would be here" #TODO: Fix this and have images loading properly
+  image: "For image based tests will have to make prods a different way"
   section: one
 
 two:
@@ -13,5 +16,5 @@ two:
   description: "Descriptive Stuff"
   stockCount: 10
   pricePence: 100
-  image: "An image would be here"
+  image: "For image based tests will have to make prods a different way"
   section: one
