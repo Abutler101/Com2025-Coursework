@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_22_144144) do
+ActiveRecord::Schema.define(version: 2020_11_23_162010) do
 
   create_table "order_entries", force: :cascade do |t|
     t.integer "quantity", default: 0, null: false
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_11_22_144144) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "name", default: "Name", null: false
-    t.text "description", default: "Description", null: false
+    t.string "name", default: "", null: false
+    t.text "description", default: "", null: false
     t.integer "stockCount", default: 0, null: false
     t.integer "pricePence", default: 0, null: false
     t.string "image", null: false
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_11_22_144144) do
   end
 
   create_table "sections", force: :cascade do |t|
-    t.string "name", default: "Name", null: false
+    t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
