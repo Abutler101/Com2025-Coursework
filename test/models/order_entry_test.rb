@@ -18,9 +18,9 @@ class OrderEntryTest < ActiveSupport::TestCase
     assert ordent.save!
   end
   test 'belongs to an order' do
-
+    assert_equal(orders(:one).order_entries.first.quantity, order_entries(:two).quantity)
   end
   test 'references a product' do
-
+    assert_equal(products(:one).name,order_entries(:one).product.name)
   end
 end
