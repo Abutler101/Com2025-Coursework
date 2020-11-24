@@ -17,10 +17,11 @@ class OrdersController < ApplicationController
       if (prod = Product.find_by(id: pId))
         if prod.stockCount > info["Num"].to_i
           order.order_entries.new(
-              product: prod,
-              quantity: info["Num"].to_i,
-              unitprice: prod.price,
-              totalprice: prod.price * info["Num"].to_i
+            product: prod,
+            quantity: info["Num"].to_i,
+            unitprice: prod.price,
+            totalprice: prod.price * info["Num"].to_i,
+            order_id: order.id
           )
           if order.valid?
             prod.stockCount -= info["Num"].to_i
