@@ -4,11 +4,11 @@
 #                                                    product
 #                                                  - Price is stored in pence then gem takes care of converting to local
 #                                                    currency and displaying with correct symbol
-#                                                  - Must have a name, price stock count and be linked to a product section
+#                                                  - Must have name,desc,price,stock count and link to a prod section
 class Product < ApplicationRecord
   belongs_to :section
   has_many :reviews, -> {order(created_at: :desc)}, dependent: :destroy
   monetize :pricePence, as: "price", numericality: true
   mount_uploader :image, ProductImgUploader
-  validates_presence_of :name, :price, :stockCount, :section
+  validates_presence_of :name, :price, :stockCount, :section, :description
 end
