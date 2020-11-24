@@ -11,12 +11,12 @@ class ProductTest < ActiveSupport::TestCase
   end
   test 'should have default stock count' do
     prod = Product.new(name: 'name', description: 'Desc', pricePence: 52, image: 'TooLazyForRealImg', section: sections(:one))
-    assert_equal(prod.stockCount, 0)
+    assert_equal(0,prod.stockCount)
   end
   test 'should have default price' do
     prod = Product.new({name: 'name', description: 'Desc', stockCount: 2,
                         image: 'TooLazyForRealImg', section: sections(:one)})
-    assert_equal(prod.pricePence, 0)
+    assert_equal(0, prod.pricePence)
   end
   test 'should not save product without section' do
     prod = Product.new({name: 'name', description: 'Desc', stockCount: 2,
@@ -35,9 +35,9 @@ class ProductTest < ActiveSupport::TestCase
     assert prod.valid?
   end
   test 'product has reviews' do
-    assert_equal(products(:one).reviews.first.content, reviews(:one).content)
+    assert_equal(reviews(:one).content, products(:one).reviews.first.content)
   end
   test 'product belongs to a section' do
-    assert_equal(products(:one).section.name, sections(:one).name)
+    assert_equal(sections(:one).name, products(:one).section.name)
   end
 end

@@ -22,9 +22,9 @@ class ReviewTest < ActiveSupport::TestCase
     assert rev.save
   end
   test 'belongs to a user' do
-    assert_equal(reviews(:one).user.firstName, users(:one).firstName)
+    assert_equal(users(:one).firstName, reviews(:one).user.firstName)
   end
   test 'belongs to a product' do
-    assert_equal(reviews(:one).product.name, products(:one).name)
+    assert_equal(products(:one).name, reviews(:one).product.name)
   end
 end
