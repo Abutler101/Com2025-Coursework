@@ -10,29 +10,30 @@ class OrdersController < ApplicationController
   # entry. If the order is valid after the creation of the entry then ammend stock levels. Once all valid entries are
   # generated save the whole thing and clear the shopping cart
   def create
-    order = Order.new(email: params[:order][:Email],
+    candidateOrder = Order.new(email: params[:order][:Email],
                       totalCost: cart_total,
                       user: curr_user)
     cart.each do |pId, info|
       if (prod = Product.find_by(id: pId))
         if prod.stockCount > info["Num"].to_i
-          order.order_entries.new(
+          candidateOrder.order_entries.new(
             product: prod,
             quantity: info["Num"].to_i,
             unitprice: prod.price,
             totalprice: prod.price * info["Num"].to_i,
-            order_id: order.id
+            order_id: candidateOrder.id
           )
-          if order.valid?
+          candidateOrder.order_entries.last.validate!
+          if candidateOrder.valid?
             prod.stockCount -= info["Num"].to_i
             Product.update(prod.id, stockCount: prod.stockCount)
           end
         end
       end
     end
-    if order.save!
+    if candidateOrder.save!
       clear_cart
-      redirect_to order_path(order), notice: t(:order_placed)
+      redirect_to order_path(candidateOrder), notice: t(:order_placed)
     else
       redirect_to carts_path, error: t(:order_failed)
     end

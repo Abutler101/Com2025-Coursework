@@ -13,10 +13,6 @@ class OrderEntryTest < ActiveSupport::TestCase
     ordent = OrderEntry.new(quantity: 4, unitprice: 52, totalprice: 208, order: orders(:one))
     assert !ordent.save
   end
-  test 'should not save without order' do
-    ordent = OrderEntry.new(quantity: 4, unitprice: 52, totalprice: 208, product: products(:one))
-    assert !ordent.save
-  end
   test 'should save valid order entry' do
     ordent = OrderEntry.new(quantity: 4, unitprice: 52, totalprice: 208, product: products(:one), order: orders(:one))
     assert ordent.save!
