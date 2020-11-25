@@ -7,4 +7,8 @@ class ActiveSupport::TestCase
   fixtures :all
   # Add more helper methods to be used by all tests here...
   Rails.application.load_seed
+
+  def sign_in_as_tester
+    post login_url, params: {email: users(:one).email, password: "t00l33t4u"}
+  end
 end
