@@ -11,6 +11,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  nav: "Navigation Menu"
   something_wrong: "Sorry, something went wrong"
   email_request_flash: "Supply an email address for response"
   in_touch: "We'll be in touch"
