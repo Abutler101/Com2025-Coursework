@@ -11,4 +11,7 @@ class ActiveSupport::TestCase
   def sign_in_as_tester
     post login_url, params: {email: users(:one).email, password: "t00l33t4u"}
   end
+  def sign_in_as_admin
+    post login_url, params: {email: users(:admin).email, password: "superSecret"}
+  end
 end
