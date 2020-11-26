@@ -45,3 +45,4 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal 'Sorry, something went wrong', flash[:danger]
   end
 end
+#Not sure if tests should be commented. The names should be enough?

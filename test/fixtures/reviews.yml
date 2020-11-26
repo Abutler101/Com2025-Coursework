@@ -11,3 +11,9 @@ two:
   user: one
   content: "Content"
   rating: 4
+
+three:
+  product: one
+  user: two
+  content: "Content"
+  rating: 4

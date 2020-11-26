@@ -5,11 +5,18 @@ one:
   lastName: "testerson"
   email: "user1@testfix.com"
   password_digest: "$2a$10$z4tBMW3RFGkQm/mGEKgAP..POVOETJn/Ybne1nIaunXi.DL.uT/Ra" #t00l33t4u
-  admin: true
+  admin: false
 
 two:
   firstName: "User2"
   lastName: "testerson"
   email: "user2@testfix.com"
-  password_digest: "$2a$10$z4tBMW3RFGkQm/mGEKgAP..POVOETJn/Ybne1nIaunXi.DL.uT/Ra"
+  password_digest: "$2a$10$z4tBMW3RFGkQm/mGEKgAP..POVOETJn/Ybne1nIaunXi.DL.uT/Ra" #t00l33t4u
   admin: false
+
+admin:
+  firstName: "Alexis"
+  lastName: "Butler"
+  email: "admin@testfix.com"
+  password_digest: "$2a$10$HUzGp9sJIDlsW50KCbAVfuFPkZjZZ2EjxgkRH/rSJ828IGG0GMmMq" #superSecret
+  admin: true
