@@ -12,4 +12,7 @@ class ActiveSupport::TestCase
   def sign_in_as_admin
     post login_url, params: {email: users(:admin).email, password: "superSecret"}
   end
+  def signout
+    get logout_url
+  end
 end
