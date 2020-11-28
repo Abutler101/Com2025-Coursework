@@ -1,5 +1,5 @@
 require 'test_helper'
-
+#TODO: write order admin tests
 class Admin::OrdersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
   end

@@ -1,5 +1,5 @@
 require 'test_helper'
-
+#TODO: write section admin tests
 class Admin::SectionsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
   end
