@@ -26,6 +26,8 @@ en:
   logout: "Logged out successfully"
   acc_created: "Account created"
   acc_closed: "Account successfully closed"
+  itm_added: "Item added to cart"
+  itm_removed: "Item removed from cart"
 
   users:
     new:

@@ -9,7 +9,7 @@ class CartsController < ApplicationController
       item["Num"] += 1
       cart[prod_id] = item
       update_cart cart
-      flash[:success] = "Item added to cart"
+      flash[:success] = t('itm_added')
       redirect_back fallback_location: :root
     end
   end
@@ -22,7 +22,7 @@ class CartsController < ApplicationController
     cart[prod_id] = item
     cart.delete(prod_id) if item["Num"] < 1
     update_cart cart
-    flash[:success] = "Item removed from cart"
+    flash[:success] = t('itm_removed')
     redirect_back fallback_location: :root
   end
 end
