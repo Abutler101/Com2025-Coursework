@@ -78,3 +78,4 @@ gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-validation-rails'
+gem 'jquery-turbolinks' #Should fix issues with intermitent dropdown behaviour
