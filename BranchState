@@ -1,0 +1,2 @@
+Successfully moved from sqlite to postgresql
+Am having trouble getting heroku to build the app correctly - it trips up over the compass framework
