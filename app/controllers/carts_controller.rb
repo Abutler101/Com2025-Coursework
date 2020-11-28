@@ -9,7 +9,8 @@ class CartsController < ApplicationController
       item["Num"] += 1
       cart[prod_id] = item
       update_cart cart
-      redirect_back fallback_location: :root_url
+      flash[:success] = "Item added to cart"
+      redirect_back fallback_location: :root
     end
   end
 
@@ -21,6 +22,7 @@ class CartsController < ApplicationController
     cart[prod_id] = item
     cart.delete(prod_id) if item["Num"] < 1
     update_cart cart
-    redirect_back fallback_location: :root_url
+    flash[:success] = "Item removed from cart"
+    redirect_back fallback_location: :root
   end
 end
