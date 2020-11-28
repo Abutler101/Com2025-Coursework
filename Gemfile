@@ -79,3 +79,4 @@ gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-validation-rails'
 gem 'jquery-turbolinks' #Should fix issues with intermitent dropdown behaviour
+gem 'compass'

@@ -12,3 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+Rails.configuration.sass.tap do |config|
+  config.load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+end

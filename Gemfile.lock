@@ -275,6 +275,7 @@ DEPENDENCIES
   carrierwave (~> 2.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  compass
   compass-h5bp (~> 1.0)
   compass-rails (~> 4.0)
   font-awesome-rails
