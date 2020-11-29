@@ -57,7 +57,7 @@ class Admin::SectionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to(admin_sections_url)
     assert_equal 'Section deleted', flash[:success]
   end
-  test 'should not delete a product if not admin' do
+  test 'should not delete a section if not admin' do
     sign_in_as_tester
     assert_no_difference 'Section.count' do
       delete admin_section_url(sections(:one))

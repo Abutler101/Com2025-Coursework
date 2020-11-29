@@ -4,6 +4,6 @@
     <h4><%= section.name %></h4>
   </td>
   <td>
-    <%= link_to fa_icon('trash'), [:admin, section], method: :delete, data: { confirm: t('.confirm') } %>
+    <%= link_to fa_icon('trash'), [:admin, section], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: t('.confirm') } %>
   </td>
 </tr>
