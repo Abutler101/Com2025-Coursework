@@ -1,5 +1,4 @@
 require 'test_helper'
-#TODO: finish product admin tests
 class Admin::ProductsControllerTest < ActionDispatch::IntegrationTest
   test 'should get table of all products' do
     sign_in_as_admin

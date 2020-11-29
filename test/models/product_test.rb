@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
+  def openAsset(filename)
+    File.open(Rails.root.join('db', 'seedAssets', filename))
+  end
   test 'should not save product without name' do
     prod = Product.new(name: '', description: 'Desc', stockCount: 2, pricePence: 52, image: 'TooLazyForRealImg', section: sections(:one))
     assert !prod.valid?
@@ -24,12 +27,13 @@ class ProductTest < ActiveSupport::TestCase
     assert !prod.valid?
   end
   test 'should save a valid product' do
+    imgFile = openAsset("Clothes1.png")
     prod = Product.new({
                            name: "prodname",
                            description: "proddesc",
                            stockCount: 67,
                            pricePence: 7082,
-                           image: "ImageFIle",
+                           image: imgFile,
                            section_id: sections(:one).id
                        })
     assert prod.valid?
