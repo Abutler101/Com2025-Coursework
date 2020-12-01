@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   # Display the table of products by date added
   def index
     @products = Product.all.order(created_at: :desc)
+    render stream: true
   end
 
   # Display a specific product given an ID
