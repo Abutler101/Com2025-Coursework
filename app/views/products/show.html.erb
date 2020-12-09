@@ -1,33 +1,47 @@
 <!--Display a specific product th reviews and allow for a review to be left -->
 <section class="prdouctFocus">
+  <h2><%= link_to @product.section.name, @product.section %> - <%= @product.name %></h2>
   <article class="productDetails">
-    <%=image_tag @product.image.main.url %><br>
-    <h3><%= @product.name %></h3><br>
-    <h4><%=t('.desc_title') %></h4> <br><p><%= @product.description %></p><br>
-    <h4><%=t('.stock_title') %></h4> <h3><%= @product.stockCount %></h3><br>
-    <h4><%=t('.price_title') %></h4> <h3><%= humanized_money_with_symbol @product.price %></h3><br>
-    <h3><%=t('.reviews_title') %></h3><br>
-    <%if curr_user %>
-      <%= form_for(Review.new, url: product_reviews_url(@product,@review)) do |f|%>
-        <%= f.select :rating,
-                     options_for_select([[t('.lvl5'),5],
-                                         [t('.lvl4'), 4],
-                                         [t('.lvl3'), 3],
-                                         [t('.lvl2'), 2],
-                                         [t('.lvl1'), 1],
-                                         [t('.lvl0'),0]
-                                        ])%><br>
-        <%= f.text_area :content%><br>
-        <%= f.submit t('.sub_button') %>
+    <div class="row row-no-gutters">
+      <div class="col-sm-5 col-lg-4">
+        <%=image_tag @product.image.main.url %>
+      </div>
+      <div class="col-lg-8 col-sm-9 col-xs-8">
+        <dl class="dl-horizontal">
+          <dt>Product Name:</dt>
+          <dd><%= @product.name %></dd>
+          <dt><%=t('.desc_title') %></dt>
+          <dd><%= @product.description %></dd>
+          <dt><%=t('.stock_title') %></dt>
+          <dd><%= @product.stockCount %></dd>
+          <dt><%=t('.price_title') %></dt>
+          <dd><%= humanized_money_with_symbol @product.price %></dd>
+        </dl>
+      </div>
+      <div class="col-lg-8 col-sm-9 col-xs-8">
+      <h3><%=t('.reviews_title') %></h3><br>
+      <%if curr_user %>
+        <%= form_for(Review.new, url: product_reviews_url(@product,@review)) do |f|%>
+          <%= f.select :rating,
+                       options_for_select([[t('.lvl5'),5],
+                                           [t('.lvl4'), 4],
+                                           [t('.lvl3'), 3],
+                                           [t('.lvl2'), 2],
+                                           [t('.lvl1'), 1],
+                                           [t('.lvl0'),0]
+                                          ])%><br>
+          <%= f.text_area :content%><br>
+          <%= f.submit t('.sub_button') %>
+        <%end %>
       <%end %>
-    <%end %>
-    <% @product.reviews.each do |i| %>
-      <strong><%= i.rating%> / 5</strong> - <%=i.content %> <br>
-      <% if i.user == curr_user %>
-        <%= link_to t('.remove_button'), product_review_path(@product, i), :method => :delete%>
-      <%end %>
-      <hr>
-    <% end %>
-    <br>
+      <% @product.reviews.each do |i| %>
+        <strong><%= i.rating%> / 5</strong> - <%=i.content %> <br>
+        <% if i.user == curr_user %>
+          <%= link_to t('.remove_button'), product_review_path(@product, i), :method => :delete%>
+        <%end %>
+        <hr>
+      <% end %>
+      </div>
+    </div>
   </article>
 </section>
