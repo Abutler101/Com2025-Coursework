@@ -1,10 +1,10 @@
 # README
-A ruby on rails web store for COM2025 coursework. 
-What follows is general house keeping stuff, read on for notes
-on: config, setup, testing, design, funky behaviour etc.
+A ruby on rails web store for COM2025 coursework.
+![alt text](CWhomepage.png "Screenshot of the homepage")  
+What follows is general house keeping stuff, read on for notes on: config, setup, testing, design, funky behaviour etc.
 
 ## Configuration
-  * ###Dev Env
+  * ### Dev Env
     * Built in ruby mine 2020.2 on ubuntu 20.04
     * Using Ruby version 2.5.7-p206
     * With Rails version 5.2.4.4
@@ -16,9 +16,17 @@ on: config, setup, testing, design, funky behaviour etc.
     * Validation of functionality on lab machines is expected to take place later today
     * Image magick version 6.9.10-23 Q16 installed to fulfil dependency of gem 
 
-## Setup
-   ###Will fill this in when setting up on verification test
-   
+## Setup (validated on heron 100 13:50 09/12/2020)
+   * `git clone gitlab@gitlab.eps.surrey.ac.uk:ab02259/com2025-coursework.git` OR `git clone git@github.com:Abutler101/Com2025-Coursework.git` OR download ZIP from coursework upload    
+   * `bundle install --path vendor/bundle`
+   * `rake db:drop`
+   * `rake db:create`
+   * `rake db:migrate`
+   * `rake db:seed`
+   * `rails db:migrate RAILS_ENV=test`
+   * run tests to confirm setup 
+   * `rails s`
+
 ## Testing
 To run all tests:
 
@@ -46,6 +54,20 @@ Expected output:
   as email prompts along the lines of: "You left something in your cart, come back and purchase here's a discount" etc were
   planned then the cart system would be moved over to Database storage with a similar table layout to the current order, order entry
   pair of tables.
+
+## Notes
+  * heron 100 config on day of validation: 
+    * ruby 2.5.1p57
+    * rails 5.2.4.4
+    * ImageMagick 6.9.7-4 Q16
+  * seeded user accounts:  
+  
+| email address     | password | Type  |
+|-------------------|----------|-------|
+| Test1@testacc.com | blank    | User  |
+| Test2@testacc.com | blank    | User  |
+| admin@testacc.com | blank    | Admin |
+
 ## Funky Behaviour
   * The dropdown for sections seems to work intermittently- 
   the suspected cause is something to do with the page loading
