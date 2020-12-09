@@ -13,7 +13,8 @@ What follows is general house keeping stuff, read on for notes on: config, setup
        * gitlab: https://gitlab.eps.surrey.ac.uk/ab02259/com2025-coursework
        * github: https://github.com/Abutler101/Com2025-Coursework
     * Tested to be working in chrome Version 86.0.4240.198
-    * Validation of functionality on lab machines is expected to take place later today
+    * Validation of functionality on lab machines ~~is expected to take place later today~~
+    has been completed
     * Image magick version 6.9.10-23 Q16 installed to fulfil dependency of gem 
 
 ## Setup (validated on heron 100 13:50 09/12/2020)
