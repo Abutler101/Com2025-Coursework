@@ -1,18 +1,34 @@
 <!--Collect and display entry info in a table row -->
-<% @order.order_entries.each do |i| %>
-  <tr>
-    <td>
-      <%= image_tag i.product.image.small.url %>
-    </td>
-    <td>
-      <h5><%=i.product.name %></h5><br>
-      <p><%=i.product.description %></p>
-    </td>
-    <td>
-      <%=i.quantity %>
-    </td>
-    <td>
-      <%= humanized_money_with_symbol i.totalprice %>
-    </td>
-  </tr>
-<% end %>
+<% @order.order_entries.each do |i|%>
+  <%if i.product.presence%>
+    <tr>
+      <td>
+        <%= image_tag i.product.image.small.url %>
+      </td>
+      <td>
+        <h5><%=i.product.name %></h5><br>
+        <p><%=i.product.description %></p>
+      </td>
+      <td>
+        <%=i.quantity %>
+      </td>
+      <td>
+        <%= humanized_money_with_symbol i.totalprice %>
+      </td>
+    </tr>
+  <%else %>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h5><%=t('orders.show.no_longer')%></h5>
+      </td>
+      <td>
+        <%=i.quantity %>
+      </td>
+      <td>
+        <%= humanized_money_with_symbol i.totalprice %>
+      </td>
+    </tr>
+  <%end %>
+<%end%>

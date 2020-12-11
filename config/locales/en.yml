@@ -64,6 +64,7 @@ en:
       lvl0: "Give me my money back"
       sub_button: "Submit review and rating"
       remove_button: "Remove Review"
+      add_cart: "Add To Cart"
     product:
       add_cart: "Add To Cart"
 
@@ -86,6 +87,7 @@ en:
       quan_title: "Quantity"
       price_title: "Price"
       total_title: "Total spend"
+      no_longer: "Product No longer stocked/tracked"
 
   contact:
     new:
@@ -144,6 +146,7 @@ en:
         email_title: "customer email"
       order:
         confirm: "Are you sure?"
+        no_longer: "Product No longer stocked/tracked"
 
     products:
       new:

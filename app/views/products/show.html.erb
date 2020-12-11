@@ -16,6 +16,13 @@
           <dd><%= @product.stockCount %></dd>
           <dt><%=t('.price_title') %></dt>
           <dd><%= humanized_money_with_symbol @product.price %></dd>
+          <dd>
+            <% if @product.stockCount >0 %>
+              <%= link_to add_item_carts_path(product_id: @product.id), method: :put do %>
+                <%= fa_icon "shopping-cart", text: t('.add_cart') %>
+              <%end%>
+            <%end%>
+          </dd>
         </dl>
       </div>
       <div class="col-lg-8 col-sm-9 col-xs-8">
