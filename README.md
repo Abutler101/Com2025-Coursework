@@ -2,6 +2,7 @@
 A ruby on rails web store for COM2025 coursework.
 ![alt text](CWhomepage.png "Screenshot of the homepage")  
 What follows is general house keeping stuff, read on for notes on: config, setup, testing, design, funky behaviour etc.
+For a table of responses to the CW marking questions goto [Marking Notes](Marking.md)
 
 ## Configuration
   * ### Dev Env
